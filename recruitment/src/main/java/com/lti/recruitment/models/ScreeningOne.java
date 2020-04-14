@@ -1,5 +1,8 @@
 package com.lti.recruitment.models;
 
+import java.sql.Time;
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,34 +19,36 @@ public class ScreeningOne {
 	private int formIdFour; 
 	
 	@Column(name ="mailId")
-	private int mailId; 
+	private String mailId; 
 	
 	@Column(name ="cv")
-	private int cv; 
+	private String cv; 
 	
 	@Column(name ="dob")
-	private int dob; 
+	private Date dob; 
 	
 	@Column(name ="contact")
 	private int contact; 
 	
 	@Column(name ="registrationDate")
-	private int registrationDate; 
+	private Date registrationDate; 
 	
 	@Column(name ="timeTaken")
-	private int timeTaken; 
+	private Time timeTaken; 
 	
 	@Column(name ="skillsMatched")
-	private int skillsMatched; 
+	private String skillsMatched; 
 	
 	@Column(name ="criteriaMatched")
-	private int criteriaMatched; 
+	private String criteriaMatched; 
 	
 	@Column(name ="reason")
-	private int reason; 
+	private String reason; 
 	
 	@Column(name ="decision")
-	private int decision;
+	private String decision;
+
+
 
 	public int getFormIdFour() {
 		return formIdFour;
@@ -53,27 +58,27 @@ public class ScreeningOne {
 		this.formIdFour = formIdFour;
 	}
 
-	public int getMailId() {
+	public String getMailId() {
 		return mailId;
 	}
 
-	public void setMailId(int mailId) {
+	public void setMailId(String mailId) {
 		this.mailId = mailId;
 	}
 
-	public int getCv() {
+	public String getCv() {
 		return cv;
 	}
 
-	public void setCv(int cv) {
+	public void setCv(String cv) {
 		this.cv = cv;
 	}
 
-	public int getDob() {
+	public Date getDob() {
 		return dob;
 	}
 
-	public void setDob(int dob) {
+	public void setDob(Date dob) {
 		this.dob = dob;
 	}
 
@@ -85,61 +90,64 @@ public class ScreeningOne {
 		this.contact = contact;
 	}
 
-	public int getRegistrationDate() {
+	public Date getRegistrationDate() {
 		return registrationDate;
 	}
 
-	public void setRegistrationDate(int registrationDate) {
+	public void setRegistrationDate(Date registrationDate) {
 		this.registrationDate = registrationDate;
 	}
 
-	public int getTimeTaken() {
+	public Time getTimeTaken() {
 		return timeTaken;
 	}
 
-	public void setTimeTaken(int timeTaken) {
+	public void setTimeTaken(Time timeTaken) {
 		this.timeTaken = timeTaken;
 	}
 
-	public int getSkillsMatched() {
+	public String getSkillsMatched() {
 		return skillsMatched;
 	}
 
-	public void setSkillsMatched(int skillsMatched) {
+	public void setSkillsMatched(String skillsMatched) {
 		this.skillsMatched = skillsMatched;
 	}
 
-	public int getCriteriaMatched() {
+	public String getCriteriaMatched() {
 		return criteriaMatched;
 	}
 
-	public void setCriteriaMatched(int criteriaMatched) {
+	public void setCriteriaMatched(String criteriaMatched) {
 		this.criteriaMatched = criteriaMatched;
 	}
 
-	public int getReason() {
+	public String getReason() {
 		return reason;
 	}
 
-	public void setReason(int reason) {
+	public void setReason(String reason) {
 		this.reason = reason;
 	}
 
-	public int getDecision() {
+	public String getDecision() {
 		return decision;
 	}
 
-	public void setDecision(int decision) {
+	public void setDecision(String decision) {
 		this.decision = decision;
 	}
 
-	public ScreeningOne() {
-		super();
-		// TODO Auto-generated constructor stub
+	@Override
+	public String toString() {
+		return "ScreeningOne [formIdFour=" + formIdFour + ", mailId=" + mailId + ", cv=" + cv + ", dob=" + dob
+				+ ", contact=" + contact + ", registrationDate=" + registrationDate + ", timeTaken=" + timeTaken
+				+ ", skillsMatched=" + skillsMatched + ", criteriaMatched=" + criteriaMatched + ", reason=" + reason
+				+ ", decision=" + decision + "]";
 	}
 
-	public ScreeningOne(int formIdFour, int mailId, int cv, int dob, int contact, int registrationDate, int timeTaken,
-			int skillsMatched, int criteriaMatched, int reason, int decision) {
+	public ScreeningOne(int formIdFour, String mailId, String cv, Date dob, int contact, Date registrationDate,
+			Time timeTaken, String skillsMatched, String criteriaMatched, String reason, String decision) {
 		super();
 		this.formIdFour = formIdFour;
 		this.mailId = mailId;
@@ -154,13 +162,9 @@ public class ScreeningOne {
 		this.decision = decision;
 	}
 
-	@Override
-	public String toString() {
-		return "ScreeningOne [formIdFour=" + formIdFour + ", mailId=" + mailId + ", cv=" + cv + ", dob=" + dob
-				+ ", contact=" + contact + ", registrationDate=" + registrationDate + ", timeTaken=" + timeTaken
-				+ ", skillsMatched=" + skillsMatched + ", criteriaMatched=" + criteriaMatched + ", reason=" + reason
-				+ ", decision=" + decision + "]";
-	} 
-	
+	public ScreeningOne() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	
 }

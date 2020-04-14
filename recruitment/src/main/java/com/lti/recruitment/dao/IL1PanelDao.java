@@ -10,5 +10,5 @@ public interface IL1PanelDao {
 			
 			
 			//Insert details
-			public void createDemandDetails(L1Panel l1Panel);
+			public void createL1PanelDetails(L1Panel l1Panel);
 }

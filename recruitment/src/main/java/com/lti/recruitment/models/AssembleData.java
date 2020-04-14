@@ -1,6 +1,5 @@
 package com.lti.recruitment.models;
 
-import java.sql.Blob;
 import java.util.Date;
 
 import javax.persistence.Column;

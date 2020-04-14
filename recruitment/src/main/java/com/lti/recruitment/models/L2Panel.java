@@ -11,12 +11,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="l1_panel")
-public class L1Panel {
+@Table(name="l2_panel")
+public class L2Panel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name ="Form_id_seven")
-	private int formIdSeven; 
+	@Column(name ="Form_id_eight")
+	private int formIdEight; 
 	
 	@Column(name ="mailId")
 	private String mailId; 
@@ -77,13 +77,13 @@ public class L1Panel {
 	
 	@Column(name ="decision")
 	private String decision;
-
-	public int getFormIdSeven() {
-		return formIdSeven;
+	
+	public int getFormIdEight() {
+		return formIdEight;
 	}
 
-	public void setFormIdSeven(int formIdSeven) {
-		this.formIdSeven = formIdSeven;
+	public void setFormIdEight(int formIdEight) {
+		this.formIdEight = formIdEight;
 	}
 
 	public String getMailId() {
@@ -230,6 +230,9 @@ public class L1Panel {
 		this.skillsMatched = skillsMatched;
 	}
 
+
+	
+	
 	public String getReason() {
 		return reason;
 	}
@@ -246,17 +249,17 @@ public class L1Panel {
 		this.decision = decision;
 	}
 
-	public L1Panel() {
+	public L2Panel() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public L1Panel(int formIdSeven, String mailId, String name, String cv, Date dob, int contact, Date registrationDate,
+	public L2Panel(int formIdEight, String mailId, String name, String cv, Date dob, int contact, Date registrationDate,
 			Date discussionDate, String position, String job, Time timeTaken, String internship,
 			Time discussionTimeTaken, String domainKnowledge, String technicalExpertise, String management,
 			String quality, String risk, String skillsMatched, String reason, String decision) {
 		super();
-		this.formIdSeven = formIdSeven;
+		this.formIdEight = formIdEight;
 		this.mailId = mailId;
 		Name = name;
 		this.cv = cv;
@@ -281,12 +284,17 @@ public class L1Panel {
 
 	@Override
 	public String toString() {
-		return "L1Panel [formIdSeven=" + formIdSeven + ", mailId=" + mailId + ", Name=" + Name + ", cv=" + cv
-				+ ", contact=" + contact + ", position=" + position + ", job=" + job + ", internship=" + internship
-				+ ", domainKnowledge=" + domainKnowledge + ", technicalExpertise=" + technicalExpertise
-				+ ", management=" + management + ", quality=" + quality + ", risk=" + risk + ", skillsMatched="
-				+ skillsMatched + ", reason=" + reason + ", decision=" + decision + "]";
+		return "L2Panel [formIdEight=" + formIdEight + ", mailId=" + mailId + ", Name=" + Name + ", cv=" + cv + ", dob="
+				+ dob + ", contact=" + contact + ", registrationDate=" + registrationDate + ", discussionDate="
+				+ discussionDate + ", position=" + position + ", job=" + job + ", timeTaken=" + timeTaken
+				+ ", internship=" + internship + ", discussionTimeTaken=" + discussionTimeTaken + ", domainKnowledge="
+				+ domainKnowledge + ", technicalExpertise=" + technicalExpertise + ", management=" + management
+				+ ", quality=" + quality + ", risk=" + risk + ", skillsMatched=" + skillsMatched + ", reason=" + reason
+				+ ", decision=" + decision + "]";
 	}
 
+	
+
+	
 	
 }

@@ -22,7 +22,7 @@ public class L1PanelServiceImpl implements IL1PanelSevice {
 
 	@Override
 	public void addL1Panel(L1Panel l1Panel) {
-		dao.createDemandDetails(l1Panel);
+		dao.createL1PanelDetails(l1Panel);
 		
 	}
 

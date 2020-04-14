@@ -11,12 +11,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="l1_panel")
-public class L1Panel {
+@Table(name="recruitment_roundtwo")
+public class RecruitmentRoundTwo {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name ="Form_id_seven")
-	private int formIdSeven; 
+	@Column(name ="Form_id_ten")
+	private int formIdTen; 
 	
 	@Column(name ="mailId")
 	private String mailId; 
@@ -51,26 +51,14 @@ public class L1Panel {
 	@Column(name ="internship")
 	private String internship; 
 	
-	@Column(name ="discussionTimeTaken")
-	private Time discussionTimeTaken; 
+	@Column(name ="confirmation")
+	private String confirmation; 
 	
-	@Column(name ="domainKnowledge")
-	private String domainKnowledge; 
+	@Column(name ="salary")
+	private int salary; 
 	
-	@Column(name ="technicalExpertise")
-	private String technicalExpertise; 
-	
-	@Column(name ="management")
-	private String management; 
-	
-	@Column(name ="quality")
-	private String quality; 
-	
-	@Column(name ="risk")
-	private String risk; 
-	
-	@Column(name ="skillsMatched")
-	private String skillsMatched; 
+	@Column(name ="venue")
+	private String venue; 
 	
 	@Column(name ="reason")
 	private String reason; 
@@ -78,12 +66,12 @@ public class L1Panel {
 	@Column(name ="decision")
 	private String decision;
 
-	public int getFormIdSeven() {
-		return formIdSeven;
+	public int getFormIdTen() {
+		return formIdTen;
 	}
 
-	public void setFormIdSeven(int formIdSeven) {
-		this.formIdSeven = formIdSeven;
+	public void setFormIdTen(int formIdTen) {
+		this.formIdTen = formIdTen;
 	}
 
 	public String getMailId() {
@@ -174,60 +162,28 @@ public class L1Panel {
 		this.internship = internship;
 	}
 
-	public Time getDiscussionTimeTaken() {
-		return discussionTimeTaken;
+	public String getConfirmation() {
+		return confirmation;
 	}
 
-	public void setDiscussionTimeTaken(Time discussionTimeTaken) {
-		this.discussionTimeTaken = discussionTimeTaken;
+	public void setConfirmation(String confirmation) {
+		this.confirmation = confirmation;
 	}
 
-	public String getDomainKnowledge() {
-		return domainKnowledge;
+	public int getSalary() {
+		return salary;
 	}
 
-	public void setDomainKnowledge(String domainKnowledge) {
-		this.domainKnowledge = domainKnowledge;
+	public void setSalary(int salary) {
+		this.salary = salary;
 	}
 
-	public String getTechnicalExpertise() {
-		return technicalExpertise;
+	public String getVenue() {
+		return venue;
 	}
 
-	public void setTechnicalExpertise(String technicalExpertise) {
-		this.technicalExpertise = technicalExpertise;
-	}
-
-	public String getManagement() {
-		return management;
-	}
-
-	public void setManagement(String management) {
-		this.management = management;
-	}
-
-	public String getQuality() {
-		return quality;
-	}
-
-	public void setQuality(String quality) {
-		this.quality = quality;
-	}
-
-	public String getRisk() {
-		return risk;
-	}
-
-	public void setRisk(String risk) {
-		this.risk = risk;
-	}
-
-	public String getSkillsMatched() {
-		return skillsMatched;
-	}
-
-	public void setSkillsMatched(String skillsMatched) {
-		this.skillsMatched = skillsMatched;
+	public void setVenue(String venue) {
+		this.venue = venue;
 	}
 
 	public String getReason() {
@@ -246,17 +202,16 @@ public class L1Panel {
 		this.decision = decision;
 	}
 
-	public L1Panel() {
+	public RecruitmentRoundTwo() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public L1Panel(int formIdSeven, String mailId, String name, String cv, Date dob, int contact, Date registrationDate,
-			Date discussionDate, String position, String job, Time timeTaken, String internship,
-			Time discussionTimeTaken, String domainKnowledge, String technicalExpertise, String management,
-			String quality, String risk, String skillsMatched, String reason, String decision) {
+	public RecruitmentRoundTwo(int formIdTen, String mailId, String name, String cv, Date dob, int contact,
+			Date registrationDate, Date discussionDate, String position, String job, Time timeTaken, String internship,
+			String confirmation, int salary, String venue, String reason, String decision) {
 		super();
-		this.formIdSeven = formIdSeven;
+		this.formIdTen = formIdTen;
 		this.mailId = mailId;
 		Name = name;
 		this.cv = cv;
@@ -268,25 +223,22 @@ public class L1Panel {
 		this.job = job;
 		this.timeTaken = timeTaken;
 		this.internship = internship;
-		this.discussionTimeTaken = discussionTimeTaken;
-		this.domainKnowledge = domainKnowledge;
-		this.technicalExpertise = technicalExpertise;
-		this.management = management;
-		this.quality = quality;
-		this.risk = risk;
-		this.skillsMatched = skillsMatched;
+		this.confirmation = confirmation;
+		this.salary = salary;
+		this.venue = venue;
 		this.reason = reason;
 		this.decision = decision;
 	}
 
 	@Override
 	public String toString() {
-		return "L1Panel [formIdSeven=" + formIdSeven + ", mailId=" + mailId + ", Name=" + Name + ", cv=" + cv
-				+ ", contact=" + contact + ", position=" + position + ", job=" + job + ", internship=" + internship
-				+ ", domainKnowledge=" + domainKnowledge + ", technicalExpertise=" + technicalExpertise
-				+ ", management=" + management + ", quality=" + quality + ", risk=" + risk + ", skillsMatched="
-				+ skillsMatched + ", reason=" + reason + ", decision=" + decision + "]";
+		return "RecruitmentRoundTwo [formIdTen=" + formIdTen + ", mailId=" + mailId + ", Name=" + Name + ", cv=" + cv
+				+ ", dob=" + dob + ", contact=" + contact + ", registrationDate=" + registrationDate
+				+ ", discussionDate=" + discussionDate + ", position=" + position + ", job=" + job + ", timeTaken="
+				+ timeTaken + ", internship=" + internship + ", confirmation=" + confirmation + ", salary=" + salary
+				+ ", venue=" + venue + ", reason=" + reason + ", decision=" + decision + "]";
 	}
-
 	
+	
+
 }

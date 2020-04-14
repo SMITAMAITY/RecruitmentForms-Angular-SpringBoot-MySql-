@@ -11,32 +11,36 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.lti.recruitment.dao.IL1PanelDao;
-import com.lti.recruitment.models.DemandDetails;
-import com.lti.recruitment.models.L1Panel;
+import com.lti.recruitment.dao.IRecruitmentRoundTwoDao;
+import com.lti.recruitment.models.RecruitmentRoundTwo;
 
 @Repository
-public class L1PanelDaoImpl implements IL1PanelDao {
+public class RecruitmentRoundTwoDaoImpl implements IRecruitmentRoundTwoDao {
+
+
 	@PersistenceContext
 	@Autowired
 	private EntityManager entityManager;
 
-	public L1PanelDaoImpl() {
+	public RecruitmentRoundTwoDaoImpl() {
 
 	}
-	
+
 	@Override
-	public List<L1Panel> readAllL1PanelDetails() {
-		String jpql = "From L1Panel";
-		TypedQuery<L1Panel> tquery = entityManager.createQuery(jpql, L1Panel.class);
+	public List<RecruitmentRoundTwo> readAllRecruitmentRoundTwo() {
+		String jpql = "From RecruitmentRoundTwo";
+		TypedQuery<RecruitmentRoundTwo> tquery = entityManager.createQuery(jpql, RecruitmentRoundTwo.class);
 		System.out.println(tquery);
 		return tquery.getResultList();
 	}
 
+
+
 	@Override
 	@Transactional(propagation = Propagation.REQUIRED)
-	public void createL1PanelDetails(L1Panel l1Panel) {
-		entityManager.persist(l1Panel);	
+	public void createRecruitmentRoundTwo(RecruitmentRoundTwo recruitmentRoundTwo) {
+		entityManager.persist(recruitmentRoundTwo);
+		
 	}
 
 }

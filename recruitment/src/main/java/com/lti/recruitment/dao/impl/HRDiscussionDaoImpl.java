@@ -11,32 +11,33 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.lti.recruitment.dao.IL1PanelDao;
-import com.lti.recruitment.models.DemandDetails;
-import com.lti.recruitment.models.L1Panel;
+import com.lti.recruitment.dao.IHRDiscussionDao;
+import com.lti.recruitment.models.HRDiscussion;
 
 @Repository
-public class L1PanelDaoImpl implements IL1PanelDao {
+public class HRDiscussionDaoImpl implements IHRDiscussionDao {
 	@PersistenceContext
 	@Autowired
 	private EntityManager entityManager;
 
-	public L1PanelDaoImpl() {
+	public HRDiscussionDaoImpl() {
 
 	}
+
 	
 	@Override
-	public List<L1Panel> readAllL1PanelDetails() {
-		String jpql = "From L1Panel";
-		TypedQuery<L1Panel> tquery = entityManager.createQuery(jpql, L1Panel.class);
+	public List<HRDiscussion> readAllHRDiscussionDetails() {
+		String jpql = "From HRDiscussion";
+		TypedQuery<HRDiscussion> tquery = entityManager.createQuery(jpql, HRDiscussion.class);
 		System.out.println(tquery);
 		return tquery.getResultList();
 	}
 
 	@Override
 	@Transactional(propagation = Propagation.REQUIRED)
-	public void createL1PanelDetails(L1Panel l1Panel) {
-		entityManager.persist(l1Panel);	
+	public void createHRDiscussionDetails(HRDiscussion hrDiscussion) {
+		entityManager.persist(hrDiscussion);
+		
 	}
 
 }

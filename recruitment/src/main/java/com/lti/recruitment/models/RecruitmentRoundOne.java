@@ -1,5 +1,8 @@
 package com.lti.recruitment.models;
 
+import java.sql.Time;
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,53 +19,52 @@ public class RecruitmentRoundOne {
 	private int formIdFive;  
 	
 	@Column(name ="mailId")
-	private int mailId; 
+	private String mailId; 
 	
 	@Column(name ="cv")
-	private int cv; 
+	private String cv; 
 	
 	@Column(name ="dob")
-	private int dob; 
+	private Date dob; 
 	
 	@Column(name ="contact")
 	private int contact; 
 	
 	@Column(name ="registrationDate")
-	private int registrationDate; 
+	private Date registrationDate; 
 	
 	@Column(name ="timeTaken")
-	private int timeTaken; 
+	private Time timeTaken; 
 	
 	@Column(name ="discussionTimeTaken")
-	private int discussionTimeTaken; 
+	private Time discussionTimeTaken; 
 	
 	@Column(name ="skillsMatched")
-	private int skillsMatched; 
+	private String skillsMatched; 
 	
 	@Column(name ="internships")
-	private int internships; 
+	private String internships; 
 	
 	@Column(name ="trainings")
-	private int trainings; 
+	private String trainings; 
 	
 	@Column(name ="questions")
-	private int questions; 
+	private String questions; 
 	
 	@Column(name ="criteriaMatched")
-	private int criteriaMatched; 
+	private String criteriaMatched; 
 	
 	@Column(name ="reason")
-	private int reason; 
+	private String reason; 
 	
 
 	@Column(name ="decision")
-	private int decision;
+	private String decision;
 
-	
+
 	public int getFormIdFive() {
 		return formIdFive;
 	}
-
 
 
 	public void setFormIdFive(int formIdFive) {
@@ -70,41 +72,34 @@ public class RecruitmentRoundOne {
 	}
 
 
-
-	public int getMailId() {
+	public String getMailId() {
 		return mailId;
 	}
 
 
-
-	public void setMailId(int mailId) {
+	public void setMailId(String mailId) {
 		this.mailId = mailId;
 	}
 
 
-
-	public int getCv() {
+	public String getCv() {
 		return cv;
 	}
 
 
-
-	public void setCv(int cv) {
+	public void setCv(String cv) {
 		this.cv = cv;
 	}
 
 
-
-	public int getDob() {
+	public Date getDob() {
 		return dob;
 	}
 
 
-
-	public void setDob(int dob) {
+	public void setDob(Date dob) {
 		this.dob = dob;
 	}
-
 
 
 	public int getContact() {
@@ -112,131 +107,109 @@ public class RecruitmentRoundOne {
 	}
 
 
-
 	public void setContact(int contact) {
 		this.contact = contact;
 	}
 
 
-
-	public int getRegistrationDate() {
+	public Date getRegistrationDate() {
 		return registrationDate;
 	}
 
 
-
-	public void setRegistrationDate(int registrationDate) {
+	public void setRegistrationDate(Date registrationDate) {
 		this.registrationDate = registrationDate;
 	}
 
 
-
-	public int getTimeTaken() {
+	public Time getTimeTaken() {
 		return timeTaken;
 	}
 
 
-
-	public void setTimeTaken(int timeTaken) {
+	public void setTimeTaken(Time timeTaken) {
 		this.timeTaken = timeTaken;
 	}
 
 
-
-	public int getDiscussionTimeTaken() {
+	public Time getDiscussionTimeTaken() {
 		return discussionTimeTaken;
 	}
 
 
-
-	public void setDiscussionTimeTaken(int discussionTimeTaken) {
+	public void setDiscussionTimeTaken(Time discussionTimeTaken) {
 		this.discussionTimeTaken = discussionTimeTaken;
 	}
 
 
-
-	public int getSkillsMatched() {
+	public String getSkillsMatched() {
 		return skillsMatched;
 	}
 
 
-
-	public void setSkillsMatched(int skillsMatched) {
+	public void setSkillsMatched(String skillsMatched) {
 		this.skillsMatched = skillsMatched;
 	}
 
 
-
-	public int getInternships() {
+	public String getInternships() {
 		return internships;
 	}
 
 
-
-	public void setInternships(int internships) {
+	public void setInternships(String internships) {
 		this.internships = internships;
 	}
 
 
-
-	public int getTrainings() {
+	public String getTrainings() {
 		return trainings;
 	}
 
 
-
-	public void setTrainings(int trainings) {
+	public void setTrainings(String trainings) {
 		this.trainings = trainings;
 	}
 
 
-
-	public int getQuestions() {
+	public String getQuestions() {
 		return questions;
 	}
 
 
-
-	public void setQuestions(int questions) {
+	public void setQuestions(String questions) {
 		this.questions = questions;
 	}
 
 
-
-	public int getCriteriaMatched() {
+	public String getCriteriaMatched() {
 		return criteriaMatched;
 	}
 
 
-
-	public void setCriteriaMatched(int criteriaMatched) {
+	public void setCriteriaMatched(String criteriaMatched) {
 		this.criteriaMatched = criteriaMatched;
 	}
 
 
-
-	public int getReason() {
+	public String getReason() {
 		return reason;
 	}
 
 
-
-	public void setReason(int reason) {
+	public void setReason(String reason) {
 		this.reason = reason;
 	}
 
 
-
-	public int getDecision() {
+	public String getDecision() {
 		return decision;
 	}
 
 
-
-	public void setDecision(int decision) {
+	public void setDecision(String decision) {
 		this.decision = decision;
 	}
-
 
 
 	public RecruitmentRoundOne() {
@@ -245,10 +218,9 @@ public class RecruitmentRoundOne {
 	}
 
 
-
-	public RecruitmentRoundOne(int formIdFive, int mailId, int cv, int dob, int contact, int registrationDate,
-			int timeTaken, int discussionTimeTaken, int skillsMatched, int internships, int trainings, int questions,
-			int criteriaMatched, int reason, int decision) {
+	public RecruitmentRoundOne(int formIdFive, String mailId, String cv, Date dob, int contact, Date registrationDate,
+			Time timeTaken, Time discussionTimeTaken, String skillsMatched, String internships, String trainings,
+			String questions, String criteriaMatched, String reason, String decision) {
 		super();
 		this.formIdFive = formIdFive;
 		this.mailId = mailId;
@@ -268,17 +240,14 @@ public class RecruitmentRoundOne {
 	}
 
 
-
 	@Override
 	public String toString() {
-		return "RecruitmentRoundOne [formIdFive=" + formIdFive + ", mailId=" + mailId + ", cv=" + cv + ", dob=" + dob
-				+ ", contact=" + contact + ", registrationDate=" + registrationDate + ", timeTaken=" + timeTaken
-				+ ", discussionTimeTaken=" + discussionTimeTaken + ", skillsMatched=" + skillsMatched + ", internships="
-				+ internships + ", trainings=" + trainings + ", questions=" + questions + ", criteriaMatched="
-				+ criteriaMatched + ", reason=" + reason + ", decision=" + decision + "]";
+		return "RecruitmentRoundOne [formIdFive=" + formIdFive + ", mailId=" + mailId + ", cv=" + cv + ", contact="
+				+ contact + ", skillsMatched=" + skillsMatched + ", internships=" + internships + ", trainings="
+				+ trainings + ", questions=" + questions + ", criteriaMatched=" + criteriaMatched + ", reason=" + reason
+				+ ", decision=" + decision + "]";
 	}
 
-
-
+	
 	
 }

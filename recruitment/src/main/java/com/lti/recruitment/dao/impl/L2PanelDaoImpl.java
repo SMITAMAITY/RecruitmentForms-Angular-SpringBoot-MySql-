@@ -11,32 +11,34 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.lti.recruitment.dao.IL1PanelDao;
-import com.lti.recruitment.models.DemandDetails;
-import com.lti.recruitment.models.L1Panel;
+import com.lti.recruitment.dao.IL2PanelDao;
+import com.lti.recruitment.models.L2Panel;
 
 @Repository
-public class L1PanelDaoImpl implements IL1PanelDao {
+public class L2PanelDaoImpl implements IL2PanelDao {
 	@PersistenceContext
 	@Autowired
 	private EntityManager entityManager;
 
-	public L1PanelDaoImpl() {
+	public L2PanelDaoImpl() {
 
 	}
-	
+
 	@Override
-	public List<L1Panel> readAllL1PanelDetails() {
-		String jpql = "From L1Panel";
-		TypedQuery<L1Panel> tquery = entityManager.createQuery(jpql, L1Panel.class);
+	public List<L2Panel> readAllL2PanelDetails() {
+		String jpql = "From L2Panel";
+		TypedQuery<L2Panel> tquery = entityManager.createQuery(jpql, L2Panel.class);
 		System.out.println(tquery);
 		return tquery.getResultList();
 	}
 
+
+
 	@Override
 	@Transactional(propagation = Propagation.REQUIRED)
-	public void createL1PanelDetails(L1Panel l1Panel) {
-		entityManager.persist(l1Panel);	
+	public void createL2PanelDetails(L2Panel l2Panel) {
+		entityManager.persist(l2Panel);
+		
 	}
 
 }
