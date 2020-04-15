@@ -1,6 +1,5 @@
 package com.lti.recruitment.models;
 
-import java.sql.Time;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -18,8 +17,8 @@ public class RecruitmentRoundOne {
 	@Column(name ="Form_id_five")
 	private int formIdFive;  
 	
-	@Column(name ="mailId")
-	private String mailId; 
+	@Column(name ="mail")
+	private String mail; 
 	
 	@Column(name ="cv")
 	private String cv; 
@@ -28,19 +27,22 @@ public class RecruitmentRoundOne {
 	private Date dob; 
 	
 	@Column(name ="contact")
-	private int contact; 
+	private String contact; 
 	
-	@Column(name ="registrationDate")
-	private Date registrationDate; 
+	@Column(name ="registration")
+	private Date registration; 
 	
-	@Column(name ="timeTaken")
-	private Time timeTaken; 
+	@Column(name ="time")
+	private String time; 
 	
-	@Column(name ="discussionTimeTaken")
-	private Time discussionTimeTaken; 
+	@Column(name ="discussiontime")
+	private String discussiontime; 
 	
-	@Column(name ="skillsMatched")
-	private String skillsMatched; 
+	@Column(name ="skills")
+	private String skills; 
+	
+	@Column(name ="criteria")
+	private String criteria; 
 	
 	@Column(name ="internships")
 	private String internships; 
@@ -51,203 +53,153 @@ public class RecruitmentRoundOne {
 	@Column(name ="questions")
 	private String questions; 
 	
-	@Column(name ="criteriaMatched")
-	private String criteriaMatched; 
-	
 	@Column(name ="reason")
-	private String reason; 
-	
-
-	@Column(name ="decision")
-	private String decision;
-
+	private String reason;
 
 	public int getFormIdFive() {
 		return formIdFive;
 	}
 
-
 	public void setFormIdFive(int formIdFive) {
 		this.formIdFive = formIdFive;
 	}
 
-
-	public String getMailId() {
-		return mailId;
+	public String getMail() {
+		return mail;
 	}
 
-
-	public void setMailId(String mailId) {
-		this.mailId = mailId;
+	public void setMail(String mail) {
+		this.mail = mail;
 	}
-
 
 	public String getCv() {
 		return cv;
 	}
 
-
 	public void setCv(String cv) {
 		this.cv = cv;
 	}
-
 
 	public Date getDob() {
 		return dob;
 	}
 
-
 	public void setDob(Date dob) {
 		this.dob = dob;
 	}
 
-
-	public int getContact() {
+	public String getContact() {
 		return contact;
 	}
 
-
-	public void setContact(int contact) {
+	public void setContact(String contact) {
 		this.contact = contact;
 	}
 
-
-	public Date getRegistrationDate() {
-		return registrationDate;
+	public Date getRegistration() {
+		return registration;
 	}
 
-
-	public void setRegistrationDate(Date registrationDate) {
-		this.registrationDate = registrationDate;
+	public void setRegistration(Date registration) {
+		this.registration = registration;
 	}
 
-
-	public Time getTimeTaken() {
-		return timeTaken;
+	public String getTime() {
+		return time;
 	}
 
-
-	public void setTimeTaken(Time timeTaken) {
-		this.timeTaken = timeTaken;
+	public void setTime(String time) {
+		this.time = time;
 	}
 
-
-	public Time getDiscussionTimeTaken() {
-		return discussionTimeTaken;
+	public String getDiscussiontime() {
+		return discussiontime;
 	}
 
-
-	public void setDiscussionTimeTaken(Time discussionTimeTaken) {
-		this.discussionTimeTaken = discussionTimeTaken;
+	public void setDiscussiontime(String discussiontime) {
+		this.discussiontime = discussiontime;
 	}
 
-
-	public String getSkillsMatched() {
-		return skillsMatched;
+	public String getSkills() {
+		return skills;
 	}
 
-
-	public void setSkillsMatched(String skillsMatched) {
-		this.skillsMatched = skillsMatched;
+	public void setSkills(String skills) {
+		this.skills = skills;
 	}
 
+	public String getCriteria() {
+		return criteria;
+	}
+
+	public void setCriteria(String criteria) {
+		this.criteria = criteria;
+	}
 
 	public String getInternships() {
 		return internships;
 	}
 
-
 	public void setInternships(String internships) {
 		this.internships = internships;
 	}
-
 
 	public String getTrainings() {
 		return trainings;
 	}
 
-
 	public void setTrainings(String trainings) {
 		this.trainings = trainings;
 	}
-
 
 	public String getQuestions() {
 		return questions;
 	}
 
-
 	public void setQuestions(String questions) {
 		this.questions = questions;
 	}
-
-
-	public String getCriteriaMatched() {
-		return criteriaMatched;
-	}
-
-
-	public void setCriteriaMatched(String criteriaMatched) {
-		this.criteriaMatched = criteriaMatched;
-	}
-
 
 	public String getReason() {
 		return reason;
 	}
 
-
 	public void setReason(String reason) {
 		this.reason = reason;
 	}
-
-
-	public String getDecision() {
-		return decision;
-	}
-
-
-	public void setDecision(String decision) {
-		this.decision = decision;
-	}
-
 
 	public RecruitmentRoundOne() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-
-	public RecruitmentRoundOne(int formIdFive, String mailId, String cv, Date dob, int contact, Date registrationDate,
-			Time timeTaken, Time discussionTimeTaken, String skillsMatched, String internships, String trainings,
-			String questions, String criteriaMatched, String reason, String decision) {
+	public RecruitmentRoundOne(int formIdFive, String mail, String cv, Date dob, String contact, Date registration,
+			String time, String discussiontime, String skills, String criteria, String internships, String trainings,
+			String questions, String reason) {
 		super();
 		this.formIdFive = formIdFive;
-		this.mailId = mailId;
+		this.mail = mail;
 		this.cv = cv;
 		this.dob = dob;
 		this.contact = contact;
-		this.registrationDate = registrationDate;
-		this.timeTaken = timeTaken;
-		this.discussionTimeTaken = discussionTimeTaken;
-		this.skillsMatched = skillsMatched;
+		this.registration = registration;
+		this.time = time;
+		this.discussiontime = discussiontime;
+		this.skills = skills;
+		this.criteria = criteria;
 		this.internships = internships;
 		this.trainings = trainings;
 		this.questions = questions;
-		this.criteriaMatched = criteriaMatched;
 		this.reason = reason;
-		this.decision = decision;
 	}
-
 
 	@Override
 	public String toString() {
-		return "RecruitmentRoundOne [formIdFive=" + formIdFive + ", mailId=" + mailId + ", cv=" + cv + ", contact="
-				+ contact + ", skillsMatched=" + skillsMatched + ", internships=" + internships + ", trainings="
-				+ trainings + ", questions=" + questions + ", criteriaMatched=" + criteriaMatched + ", reason=" + reason
-				+ ", decision=" + decision + "]";
+		return "RecruitmentRoundOne [formIdFive=" + formIdFive + ", mail=" + mail + ", cv=" + cv + ", dob=" + dob
+				+ ", contact=" + contact + ", registration=" + registration + ", time=" + time + ", discussiontime="
+				+ discussiontime + ", skills=" + skills + ", criteria=" + criteria + ", internships=" + internships
+				+ ", trainings=" + trainings + ", questions=" + questions + ", reason=" + reason + "]";
 	}
 
-	
-	
+
 }

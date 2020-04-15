@@ -1,6 +1,5 @@
 package com.lti.recruitment.models;
 
-import java.sql.Time;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -18,8 +17,8 @@ public class L1Panel {
 	@Column(name ="Form_id_seven")
 	private int formIdSeven; 
 	
-	@Column(name ="mailId")
-	private String mailId; 
+	@Column(name ="mail")
+	private String mail; 
 	
 	@Column(name ="Name")
 	private String Name; 
@@ -31,13 +30,13 @@ public class L1Panel {
 	private Date dob; 
 	
 	@Column(name ="contact")
-	private int contact; 
+	private String contact; 
 	
-	@Column(name ="registrationDate")
-	private Date registrationDate; 
+	@Column(name ="registration")
+	private Date registration; 
 	
-	@Column(name ="discussionDate")
-	private Date discussionDate; 
+	@Column(name ="discussiondate")
+	private Date discussiondate; 
 	
 	@Column(name ="position")
 	private String position;
@@ -45,20 +44,20 @@ public class L1Panel {
 	@Column(name ="job")
 	private String job; 
 	
-	@Column(name ="timeTaken")
-	private Time timeTaken;
+	@Column(name ="time")
+	private String time;
 	
 	@Column(name ="internship")
 	private String internship; 
 	
-	@Column(name ="discussionTimeTaken")
-	private Time discussionTimeTaken; 
+	@Column(name ="discussiontime")
+	private String discussiontime; 
 	
-	@Column(name ="domainKnowledge")
-	private String domainKnowledge; 
-	
-	@Column(name ="technicalExpertise")
-	private String technicalExpertise; 
+	@Column(name ="domainknowledge")
+	private String domainknowledge; 
+
+	@Column(name ="technicalexpertise")
+	private String technicalexpertise; 
 	
 	@Column(name ="management")
 	private String management; 
@@ -69,14 +68,17 @@ public class L1Panel {
 	@Column(name ="risk")
 	private String risk; 
 	
-	@Column(name ="skillsMatched")
-	private String skillsMatched; 
+	@Column(name ="skills")
+	private String skills; 
+	
+	@Column(name ="behaviour")
+	private String behaviour; 
+	
+	@Column(name ="personaleffectiveness")
+	private String personaleffectiveness; 
 	
 	@Column(name ="reason")
-	private String reason; 
-	
-	@Column(name ="decision")
-	private String decision;
+	private String reason;
 
 	public int getFormIdSeven() {
 		return formIdSeven;
@@ -86,12 +88,12 @@ public class L1Panel {
 		this.formIdSeven = formIdSeven;
 	}
 
-	public String getMailId() {
-		return mailId;
+	public String getMail() {
+		return mail;
 	}
 
-	public void setMailId(String mailId) {
-		this.mailId = mailId;
+	public void setMail(String mail) {
+		this.mail = mail;
 	}
 
 	public String getName() {
@@ -118,28 +120,28 @@ public class L1Panel {
 		this.dob = dob;
 	}
 
-	public int getContact() {
+	public String getContact() {
 		return contact;
 	}
 
-	public void setContact(int contact) {
+	public void setContact(String contact) {
 		this.contact = contact;
 	}
 
-	public Date getRegistrationDate() {
-		return registrationDate;
+	public Date getRegistration() {
+		return registration;
 	}
 
-	public void setRegistrationDate(Date registrationDate) {
-		this.registrationDate = registrationDate;
+	public void setRegistration(Date registration) {
+		this.registration = registration;
 	}
 
-	public Date getDiscussionDate() {
-		return discussionDate;
+	public Date getDiscussiondate() {
+		return discussiondate;
 	}
 
-	public void setDiscussionDate(Date discussionDate) {
-		this.discussionDate = discussionDate;
+	public void setDiscussiondate(Date discussiondate) {
+		this.discussiondate = discussiondate;
 	}
 
 	public String getPosition() {
@@ -158,12 +160,12 @@ public class L1Panel {
 		this.job = job;
 	}
 
-	public Time getTimeTaken() {
-		return timeTaken;
+	public String getTime() {
+		return time;
 	}
 
-	public void setTimeTaken(Time timeTaken) {
-		this.timeTaken = timeTaken;
+	public void setTime(String time) {
+		this.time = time;
 	}
 
 	public String getInternship() {
@@ -174,28 +176,28 @@ public class L1Panel {
 		this.internship = internship;
 	}
 
-	public Time getDiscussionTimeTaken() {
-		return discussionTimeTaken;
+	public String getDiscussiontime() {
+		return discussiontime;
 	}
 
-	public void setDiscussionTimeTaken(Time discussionTimeTaken) {
-		this.discussionTimeTaken = discussionTimeTaken;
+	public void setDiscussiontime(String discussiontime) {
+		this.discussiontime = discussiontime;
 	}
 
-	public String getDomainKnowledge() {
-		return domainKnowledge;
+	public String getDomainknowledge() {
+		return domainknowledge;
 	}
 
-	public void setDomainKnowledge(String domainKnowledge) {
-		this.domainKnowledge = domainKnowledge;
+	public void setDomainknowledge(String domainknowledge) {
+		this.domainknowledge = domainknowledge;
 	}
 
-	public String getTechnicalExpertise() {
-		return technicalExpertise;
+	public String getTechnicalexpertise() {
+		return technicalexpertise;
 	}
 
-	public void setTechnicalExpertise(String technicalExpertise) {
-		this.technicalExpertise = technicalExpertise;
+	public void setTechnicalexpertise(String technicalexpertise) {
+		this.technicalexpertise = technicalexpertise;
 	}
 
 	public String getManagement() {
@@ -222,12 +224,28 @@ public class L1Panel {
 		this.risk = risk;
 	}
 
-	public String getSkillsMatched() {
-		return skillsMatched;
+	public String getSkills() {
+		return skills;
 	}
 
-	public void setSkillsMatched(String skillsMatched) {
-		this.skillsMatched = skillsMatched;
+	public void setSkills(String skills) {
+		this.skills = skills;
+	}
+
+	public String getBehaviour() {
+		return behaviour;
+	}
+
+	public void setBehaviour(String behaviour) {
+		this.behaviour = behaviour;
+	}
+
+	public String getPersonaleffectiveness() {
+		return personaleffectiveness;
+	}
+
+	public void setPersonaleffectiveness(String personaleffectiveness) {
+		this.personaleffectiveness = personaleffectiveness;
 	}
 
 	public String getReason() {
@@ -238,55 +256,53 @@ public class L1Panel {
 		this.reason = reason;
 	}
 
-	public String getDecision() {
-		return decision;
-	}
-
-	public void setDecision(String decision) {
-		this.decision = decision;
-	}
-
 	public L1Panel() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public L1Panel(int formIdSeven, String mailId, String name, String cv, Date dob, int contact, Date registrationDate,
-			Date discussionDate, String position, String job, Time timeTaken, String internship,
-			Time discussionTimeTaken, String domainKnowledge, String technicalExpertise, String management,
-			String quality, String risk, String skillsMatched, String reason, String decision) {
+	public L1Panel(int formIdSeven, String mail, String name, String cv, Date dob, String contact, Date registration,
+			Date discussiondate, String position, String job, String time, String internship, String discussiontime,
+			String domainknowledge, String technicalexpertise, String management, String quality, String risk,
+			String skills, String behaviour, String personaleffectiveness, String reason) {
 		super();
 		this.formIdSeven = formIdSeven;
-		this.mailId = mailId;
+		this.mail = mail;
 		Name = name;
 		this.cv = cv;
 		this.dob = dob;
 		this.contact = contact;
-		this.registrationDate = registrationDate;
-		this.discussionDate = discussionDate;
+		this.registration = registration;
+		this.discussiondate = discussiondate;
 		this.position = position;
 		this.job = job;
-		this.timeTaken = timeTaken;
+		this.time = time;
 		this.internship = internship;
-		this.discussionTimeTaken = discussionTimeTaken;
-		this.domainKnowledge = domainKnowledge;
-		this.technicalExpertise = technicalExpertise;
+		this.discussiontime = discussiontime;
+		this.domainknowledge = domainknowledge;
+		this.technicalexpertise = technicalexpertise;
 		this.management = management;
 		this.quality = quality;
 		this.risk = risk;
-		this.skillsMatched = skillsMatched;
+		this.skills = skills;
+		this.behaviour = behaviour;
+		this.personaleffectiveness = personaleffectiveness;
 		this.reason = reason;
-		this.decision = decision;
 	}
 
 	@Override
 	public String toString() {
-		return "L1Panel [formIdSeven=" + formIdSeven + ", mailId=" + mailId + ", Name=" + Name + ", cv=" + cv
-				+ ", contact=" + contact + ", position=" + position + ", job=" + job + ", internship=" + internship
-				+ ", domainKnowledge=" + domainKnowledge + ", technicalExpertise=" + technicalExpertise
-				+ ", management=" + management + ", quality=" + quality + ", risk=" + risk + ", skillsMatched="
-				+ skillsMatched + ", reason=" + reason + ", decision=" + decision + "]";
+		return "L1Panel [formIdSeven=" + formIdSeven + ", mail=" + mail + ", Name=" + Name + ", cv=" + cv + ", dob="
+				+ dob + ", contact=" + contact + ", registration=" + registration + ", discussiondate=" + discussiondate
+				+ ", position=" + position + ", job=" + job + ", time=" + time + ", internship=" + internship
+				+ ", discussiontime=" + discussiontime + ", domainknowledge=" + domainknowledge
+				+ ", technicalexpertise=" + technicalexpertise + ", management=" + management + ", quality=" + quality
+				+ ", risk=" + risk + ", skills=" + skills + ", behaviour=" + behaviour + ", personaleffectiveness="
+				+ personaleffectiveness + ", reason=" + reason + "]";
 	}
 
+	
+	
+	
 	
 }

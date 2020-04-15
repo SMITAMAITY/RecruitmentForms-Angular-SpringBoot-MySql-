@@ -1,6 +1,5 @@
 package com.lti.recruitment.models;
 
-import java.sql.Time;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -18,8 +17,8 @@ public class ScreeningOne {
 	@Column(name ="Form_id_four")
 	private int formIdFour; 
 	
-	@Column(name ="mailId")
-	private String mailId; 
+	@Column(name ="mail")
+	private String mail; 
 	
 	@Column(name ="cv")
 	private String cv; 
@@ -28,27 +27,23 @@ public class ScreeningOne {
 	private Date dob; 
 	
 	@Column(name ="contact")
-	private int contact; 
+	private String contact; 
 	
-	@Column(name ="registrationDate")
-	private Date registrationDate; 
+	@Column(name ="registration")
+	private Date registration; 
 	
-	@Column(name ="timeTaken")
-	private Time timeTaken; 
+	@Column(name ="time")
+	private String time; 
 	
-	@Column(name ="skillsMatched")
-	private String skillsMatched; 
+	@Column(name ="skills")
+	private String skills; 
 	
-	@Column(name ="criteriaMatched")
-	private String criteriaMatched; 
+	@Column(name ="criteria")
+	private String criteria; 
 	
 	@Column(name ="reason")
 	private String reason; 
 	
-	@Column(name ="decision")
-	private String decision;
-
-
 
 	public int getFormIdFour() {
 		return formIdFour;
@@ -58,12 +53,12 @@ public class ScreeningOne {
 		this.formIdFour = formIdFour;
 	}
 
-	public String getMailId() {
-		return mailId;
+	public String getMail() {
+		return mail;
 	}
 
-	public void setMailId(String mailId) {
-		this.mailId = mailId;
+	public void setMail(String mail) {
+		this.mail = mail;
 	}
 
 	public String getCv() {
@@ -82,44 +77,44 @@ public class ScreeningOne {
 		this.dob = dob;
 	}
 
-	public int getContact() {
+	public String getContact() {
 		return contact;
 	}
 
-	public void setContact(int contact) {
+	public void setContact(String contact) {
 		this.contact = contact;
 	}
 
-	public Date getRegistrationDate() {
-		return registrationDate;
+	public Date getRegistration() {
+		return registration;
 	}
 
-	public void setRegistrationDate(Date registrationDate) {
-		this.registrationDate = registrationDate;
+	public void setRegistration(Date registration) {
+		this.registration = registration;
 	}
 
-	public Time getTimeTaken() {
-		return timeTaken;
+	public String getTime() {
+		return time;
 	}
 
-	public void setTimeTaken(Time timeTaken) {
-		this.timeTaken = timeTaken;
+	public void setTime(String time) {
+		this.time = time;
 	}
 
-	public String getSkillsMatched() {
-		return skillsMatched;
+	public String getSkills() {
+		return skills;
 	}
 
-	public void setSkillsMatched(String skillsMatched) {
-		this.skillsMatched = skillsMatched;
+	public void setSkills(String skills) {
+		this.skills = skills;
 	}
 
-	public String getCriteriaMatched() {
-		return criteriaMatched;
+	public String getCriteria() {
+		return criteria;
 	}
 
-	public void setCriteriaMatched(String criteriaMatched) {
-		this.criteriaMatched = criteriaMatched;
+	public void setCriteria(String criteria) {
+		this.criteria = criteria;
 	}
 
 	public String getReason() {
@@ -130,41 +125,37 @@ public class ScreeningOne {
 		this.reason = reason;
 	}
 
-	public String getDecision() {
-		return decision;
-	}
 
-	public void setDecision(String decision) {
-		this.decision = decision;
-	}
-
-	@Override
-	public String toString() {
-		return "ScreeningOne [formIdFour=" + formIdFour + ", mailId=" + mailId + ", cv=" + cv + ", dob=" + dob
-				+ ", contact=" + contact + ", registrationDate=" + registrationDate + ", timeTaken=" + timeTaken
-				+ ", skillsMatched=" + skillsMatched + ", criteriaMatched=" + criteriaMatched + ", reason=" + reason
-				+ ", decision=" + decision + "]";
-	}
-
-	public ScreeningOne(int formIdFour, String mailId, String cv, Date dob, int contact, Date registrationDate,
-			Time timeTaken, String skillsMatched, String criteriaMatched, String reason, String decision) {
-		super();
-		this.formIdFour = formIdFour;
-		this.mailId = mailId;
-		this.cv = cv;
-		this.dob = dob;
-		this.contact = contact;
-		this.registrationDate = registrationDate;
-		this.timeTaken = timeTaken;
-		this.skillsMatched = skillsMatched;
-		this.criteriaMatched = criteriaMatched;
-		this.reason = reason;
-		this.decision = decision;
-	}
 
 	public ScreeningOne() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+
+	public ScreeningOne(int formIdFour, String mail, String cv, Date dob, String contact, Date registration,
+			String time, String skills, String criteria, String reason) {
+		super();
+		this.formIdFour = formIdFour;
+		this.mail = mail;
+		this.cv = cv;
+		this.dob = dob;
+		this.contact = contact;
+		this.registration = registration;
+		this.time = time;
+		this.skills = skills;
+		this.criteria = criteria;
+		this.reason = reason;
+		
+	}
+
+	@Override
+	public String toString() {
+		return "ScreeningOne [formIdFour=" + formIdFour + ", mail=" + mail + ", cv=" + cv + ", dob=" + dob
+				+ ", contact=" + contact + ", registration=" + registration + ", time=" + time + ", skills=" + skills
+				+ ", criteria=" + criteria + ", reason=" + reason + "]";
+	}
+
+	
+
 	
 }

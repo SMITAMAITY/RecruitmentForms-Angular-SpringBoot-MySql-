@@ -17,8 +17,8 @@ public class FirstExceptionApproval {
 	@Column(name ="Form_id_twelve")
 	private int formIdTwelve; 
 	
-	@Column(name ="mailId")
-	private String mailId; 
+	@Column(name ="mail")
+	private String mail; 
 	
 	@Column(name ="Name")
 	private String Name; 
@@ -30,10 +30,10 @@ public class FirstExceptionApproval {
 	private Date dob; 
 	
 	@Column(name ="contact")
-	private int contact; 
+	private String contact; 
 	
-	@Column(name ="registrationDate")
-	private Date registrationDate; 
+	@Column(name ="registration")
+	private Date registration; 
 
 	@Column(name ="approver")
 	private String approver;
@@ -42,10 +42,7 @@ public class FirstExceptionApproval {
 	private String confirmation; 
 	
 	@Column(name ="reason")
-	private String reason; 
-	
-	@Column(name ="decision")
-	private String decision;
+	private String reason;
 
 	public int getFormIdTwelve() {
 		return formIdTwelve;
@@ -55,12 +52,12 @@ public class FirstExceptionApproval {
 		this.formIdTwelve = formIdTwelve;
 	}
 
-	public String getMailId() {
-		return mailId;
+	public String getMail() {
+		return mail;
 	}
 
-	public void setMailId(String mailId) {
-		this.mailId = mailId;
+	public void setMail(String mail) {
+		this.mail = mail;
 	}
 
 	public String getName() {
@@ -87,20 +84,20 @@ public class FirstExceptionApproval {
 		this.dob = dob;
 	}
 
-	public int getContact() {
+	public String getContact() {
 		return contact;
 	}
 
-	public void setContact(int contact) {
+	public void setContact(String contact) {
 		this.contact = contact;
 	}
 
-	public Date getRegistrationDate() {
-		return registrationDate;
+	public Date getRegistration() {
+		return registration;
 	}
 
-	public void setRegistrationDate(Date registrationDate) {
-		this.registrationDate = registrationDate;
+	public void setRegistration(Date registration) {
+		this.registration = registration;
 	}
 
 	public String getApprover() {
@@ -127,42 +124,32 @@ public class FirstExceptionApproval {
 		this.reason = reason;
 	}
 
-	public String getDecision() {
-		return decision;
-	}
-
-	public void setDecision(String decision) {
-		this.decision = decision;
-	}
-
 	public FirstExceptionApproval() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public FirstExceptionApproval(int formIdTwelve, String mailId, String name, String cv, Date dob, int contact,
-			Date registrationDate, String approver, String confirmation, String reason, String decision) {
+	public FirstExceptionApproval(int formIdTwelve, String mail, String name, String cv, Date dob, String contact,
+			Date registration, String approver, String confirmation, String reason) {
 		super();
 		this.formIdTwelve = formIdTwelve;
-		this.mailId = mailId;
+		this.mail = mail;
 		Name = name;
 		this.cv = cv;
 		this.dob = dob;
 		this.contact = contact;
-		this.registrationDate = registrationDate;
+		this.registration = registration;
 		this.approver = approver;
 		this.confirmation = confirmation;
 		this.reason = reason;
-		this.decision = decision;
 	}
 
 	@Override
 	public String toString() {
-		return "FirstExceptionApproval [formIdTwelve=" + formIdTwelve + ", mailId=" + mailId + ", Name=" + Name
-				+ ", cv=" + cv + ", dob=" + dob + ", contact=" + contact + ", registrationDate=" + registrationDate
-				+ ", approver=" + approver + ", confirmation=" + confirmation + ", reason=" + reason + ", decision="
-				+ decision + "]";
-	}
-	
+		return "FirstExceptionApproval [formIdTwelve=" + formIdTwelve + ", mail=" + mail + ", Name=" + Name + ", cv="
+				+ cv + ", dob=" + dob + ", contact=" + contact + ", registration=" + registration + ", approver="
+				+ approver + ", confirmation=" + confirmation + ", reason=" + reason + "]";
+	} 
+
 	
 }

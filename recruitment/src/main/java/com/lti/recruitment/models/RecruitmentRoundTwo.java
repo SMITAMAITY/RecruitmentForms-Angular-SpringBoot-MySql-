@@ -18,8 +18,8 @@ public class RecruitmentRoundTwo {
 	@Column(name ="Form_id_ten")
 	private int formIdTen; 
 	
-	@Column(name ="mailId")
-	private String mailId; 
+	@Column(name ="mail")
+	private String mail; 
 	
 	@Column(name ="Name")
 	private String Name; 
@@ -31,13 +31,13 @@ public class RecruitmentRoundTwo {
 	private Date dob; 
 	
 	@Column(name ="contact")
-	private int contact; 
+	private String contact; 
 	
-	@Column(name ="registrationDate")
-	private Date registrationDate; 
+	@Column(name ="registration")
+	private Date registration; 
 	
-	@Column(name ="discussionDate")
-	private Date discussionDate; 
+	@Column(name ="discussiondate")
+	private Date discussiondate; 
 	
 	@Column(name ="position")
 	private String position;
@@ -45,26 +45,23 @@ public class RecruitmentRoundTwo {
 	@Column(name ="job")
 	private String job; 
 	
-	@Column(name ="timeTaken")
-	private Time timeTaken;
+	@Column(name ="time")
+	private String time;
 	
-	@Column(name ="internship")
-	private String internship; 
+	@Column(name ="interview")
+	private String interview; 
 	
 	@Column(name ="confirmation")
 	private String confirmation; 
 	
 	@Column(name ="salary")
-	private int salary; 
+	private double salary; 
 	
 	@Column(name ="venue")
 	private String venue; 
 	
 	@Column(name ="reason")
-	private String reason; 
-	
-	@Column(name ="decision")
-	private String decision;
+	private String reason;
 
 	public int getFormIdTen() {
 		return formIdTen;
@@ -74,12 +71,12 @@ public class RecruitmentRoundTwo {
 		this.formIdTen = formIdTen;
 	}
 
-	public String getMailId() {
-		return mailId;
+	public String getMail() {
+		return mail;
 	}
 
-	public void setMailId(String mailId) {
-		this.mailId = mailId;
+	public void setMail(String mail) {
+		this.mail = mail;
 	}
 
 	public String getName() {
@@ -106,28 +103,28 @@ public class RecruitmentRoundTwo {
 		this.dob = dob;
 	}
 
-	public int getContact() {
+	public String getContact() {
 		return contact;
 	}
 
-	public void setContact(int contact) {
+	public void setContact(String contact) {
 		this.contact = contact;
 	}
 
-	public Date getRegistrationDate() {
-		return registrationDate;
+	public Date getRegistration() {
+		return registration;
 	}
 
-	public void setRegistrationDate(Date registrationDate) {
-		this.registrationDate = registrationDate;
+	public void setRegistration(Date registration) {
+		this.registration = registration;
 	}
 
-	public Date getDiscussionDate() {
-		return discussionDate;
+	public Date getDiscussiondate() {
+		return discussiondate;
 	}
 
-	public void setDiscussionDate(Date discussionDate) {
-		this.discussionDate = discussionDate;
+	public void setDiscussiondate(Date discussiondate) {
+		this.discussiondate = discussiondate;
 	}
 
 	public String getPosition() {
@@ -146,20 +143,20 @@ public class RecruitmentRoundTwo {
 		this.job = job;
 	}
 
-	public Time getTimeTaken() {
-		return timeTaken;
+	public String getTime() {
+		return time;
 	}
 
-	public void setTimeTaken(Time timeTaken) {
-		this.timeTaken = timeTaken;
+	public void setTime(String time) {
+		this.time = time;
 	}
 
-	public String getInternship() {
-		return internship;
+	public String getInterview() {
+		return interview;
 	}
 
-	public void setInternship(String internship) {
-		this.internship = internship;
+	public void setInterview(String interview) {
+		this.interview = interview;
 	}
 
 	public String getConfirmation() {
@@ -170,11 +167,11 @@ public class RecruitmentRoundTwo {
 		this.confirmation = confirmation;
 	}
 
-	public int getSalary() {
+	public double getSalary() {
 		return salary;
 	}
 
-	public void setSalary(int salary) {
+	public void setSalary(double salary) {
 		this.salary = salary;
 	}
 
@@ -194,50 +191,41 @@ public class RecruitmentRoundTwo {
 		this.reason = reason;
 	}
 
-	public String getDecision() {
-		return decision;
-	}
-
-	public void setDecision(String decision) {
-		this.decision = decision;
-	}
-
 	public RecruitmentRoundTwo() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public RecruitmentRoundTwo(int formIdTen, String mailId, String name, String cv, Date dob, int contact,
-			Date registrationDate, Date discussionDate, String position, String job, Time timeTaken, String internship,
-			String confirmation, int salary, String venue, String reason, String decision) {
+	public RecruitmentRoundTwo(int formIdTen, String mail, String name, String cv, Date dob, String contact,
+			Date registration, Date discussiondate, String position, String job, String time, String interview,
+			String confirmation, double salary, String venue, String reason) {
 		super();
 		this.formIdTen = formIdTen;
-		this.mailId = mailId;
+		this.mail = mail;
 		Name = name;
 		this.cv = cv;
 		this.dob = dob;
 		this.contact = contact;
-		this.registrationDate = registrationDate;
-		this.discussionDate = discussionDate;
+		this.registration = registration;
+		this.discussiondate = discussiondate;
 		this.position = position;
 		this.job = job;
-		this.timeTaken = timeTaken;
-		this.internship = internship;
+		this.time = time;
+		this.interview = interview;
 		this.confirmation = confirmation;
 		this.salary = salary;
 		this.venue = venue;
 		this.reason = reason;
-		this.decision = decision;
 	}
 
 	@Override
 	public String toString() {
-		return "RecruitmentRoundTwo [formIdTen=" + formIdTen + ", mailId=" + mailId + ", Name=" + Name + ", cv=" + cv
-				+ ", dob=" + dob + ", contact=" + contact + ", registrationDate=" + registrationDate
-				+ ", discussionDate=" + discussionDate + ", position=" + position + ", job=" + job + ", timeTaken="
-				+ timeTaken + ", internship=" + internship + ", confirmation=" + confirmation + ", salary=" + salary
-				+ ", venue=" + venue + ", reason=" + reason + ", decision=" + decision + "]";
-	}
+		return "RecruitmentRoundTwo [formIdTen=" + formIdTen + ", mail=" + mail + ", Name=" + Name + ", cv=" + cv
+				+ ", dob=" + dob + ", contact=" + contact + ", registration=" + registration + ", discussiondate="
+				+ discussiondate + ", position=" + position + ", job=" + job + ", time=" + time + ", interview="
+				+ interview + ", confirmation=" + confirmation + ", salary=" + salary + ", venue=" + venue + ", reason="
+				+ reason + "]";
+	} 
 	
 	
 

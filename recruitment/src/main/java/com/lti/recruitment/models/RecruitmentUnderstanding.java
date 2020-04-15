@@ -43,9 +43,7 @@ public class RecruitmentUnderstanding {
 	private String requestorDepartment;
 
 	
-	@ManyToOne
-	@JoinColumn(name="Form_id_one")
-	private DemandDetails demand_details;
+
 	
 	
 	
@@ -135,7 +133,7 @@ public class RecruitmentUnderstanding {
 
 	public RecruitmentUnderstanding(int formIdTwo, String jobTitle, String jobOverview, int resourcesNeeded,
 			String skillsRequired, String criteria, String requestorId, String requestorPUBU,
-			String requestorDepartment, DemandDetails demand_details) {
+			String requestorDepartment) {
 		super();
 		this.formIdTwo = formIdTwo;
 		this.jobTitle = jobTitle;
@@ -146,7 +144,7 @@ public class RecruitmentUnderstanding {
 		this.requestorId = requestorId;
 		this.requestorPUBU = requestorPUBU;
 		this.requestorDepartment = requestorDepartment;
-		this.demand_details = demand_details;
+		
 	}
 
 	@Override
@@ -154,6 +152,6 @@ public class RecruitmentUnderstanding {
 		return "RecruitmentUnderstanding [formIdTwo=" + formIdTwo + ", jobTitle=" + jobTitle + ", jobOverview="
 				+ jobOverview + ", resourcesNeeded=" + resourcesNeeded + ", skillsRequired=" + skillsRequired
 				+ ", criteria=" + criteria + ", requestorId=" + requestorId + ", requestorPUBU=" + requestorPUBU
-				+ ", requestorDepartment=" + requestorDepartment + ", demand_details=" + demand_details + "]";
+				+ ", requestorDepartment=" + requestorDepartment + "]";
 	}
 }

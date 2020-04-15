@@ -8,6 +8,8 @@ import javax.persistence.TypedQuery;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.lti.recruitment.dao.IScreeningOneDao;
 import com.lti.recruitment.models.ScreeningOne;
@@ -30,6 +32,7 @@ public class ScreeningOneDaoImpl implements IScreeningOneDao {
 	}
 	
 	@Override
+	@Transactional(propagation = Propagation.REQUIRED)
 	public void createScreeningOneDetails(ScreeningOne screeningOne) {
 		entityManager.persist(screeningOne);
 		

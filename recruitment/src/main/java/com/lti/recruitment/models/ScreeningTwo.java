@@ -1,6 +1,5 @@
 package com.lti.recruitment.models;
 
-import java.sql.Time;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -18,8 +17,8 @@ public class ScreeningTwo {
 	@Column(name ="Form_id_six")
 	private int formIdSix; 
 	
-	@Column(name ="mailId")
-	private String mailId; 
+	@Column(name ="mail")
+	private String mail; 
 	
 	@Column(name ="cv")
 	private String cv; 
@@ -28,16 +27,16 @@ public class ScreeningTwo {
 	private Date dob; 
 	
 	@Column(name ="contact")
-	private int contact; 
+	private String contact; 
 	
-	@Column(name ="registrationDate")
-	private Date registrationDate; 
+	@Column(name ="registration")
+	private Date registration; 
 	
-	@Column(name ="timeTaken")
-	private Time timeTaken; 
+	@Column(name ="time")
+	private String time; 
 	
-	@Column(name ="discussionTimeTaken")
-	private Time discussionTimeTaken; 
+	@Column(name ="discussiontime")
+	private String discussiontime; 
 	
 	@Column(name ="skillsMatched")
 	private String skillsMatched; 
@@ -52,10 +51,7 @@ public class ScreeningTwo {
 	private String trainings; 
 	
 	@Column(name ="reason")
-	private String reason; 
-	
-	@Column(name ="decision")
-	private String decision;
+	private String reason;
 
 	public int getFormIdSix() {
 		return formIdSix;
@@ -65,12 +61,12 @@ public class ScreeningTwo {
 		this.formIdSix = formIdSix;
 	}
 
-	public String getMailId() {
-		return mailId;
+	public String getMail() {
+		return mail;
 	}
 
-	public void setMailId(String mailId) {
-		this.mailId = mailId;
+	public void setMail(String mail) {
+		this.mail = mail;
 	}
 
 	public String getCv() {
@@ -89,36 +85,36 @@ public class ScreeningTwo {
 		this.dob = dob;
 	}
 
-	public int getContact() {
+	public String getContact() {
 		return contact;
 	}
 
-	public void setContact(int contact) {
+	public void setContact(String contact) {
 		this.contact = contact;
 	}
 
-	public Date getRegistrationDate() {
-		return registrationDate;
+	public Date getRegistration() {
+		return registration;
 	}
 
-	public void setRegistrationDate(Date registrationDate) {
-		this.registrationDate = registrationDate;
+	public void setRegistration(Date registration) {
+		this.registration = registration;
 	}
 
-	public Time getTimeTaken() {
-		return timeTaken;
+	public String getTime() {
+		return time;
 	}
 
-	public void setTimeTaken(Time timeTaken) {
-		this.timeTaken = timeTaken;
+	public void setTime(String time) {
+		this.time = time;
 	}
 
-	public Time getDiscussionTimeTaken() {
-		return discussionTimeTaken;
+	public String getDiscussiontime() {
+		return discussiontime;
 	}
 
-	public void setDiscussionTimeTaken(Time discussionTimeTaken) {
-		this.discussionTimeTaken = discussionTimeTaken;
+	public void setDiscussiontime(String discussiontime) {
+		this.discussiontime = discussiontime;
 	}
 
 	public String getSkillsMatched() {
@@ -161,50 +157,37 @@ public class ScreeningTwo {
 		this.reason = reason;
 	}
 
-	public String getDecision() {
-		return decision;
-	}
-
-	public void setDecision(String decision) {
-		this.decision = decision;
-	}
-
 	public ScreeningTwo() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public ScreeningTwo(int formIdSix, String mailId, String cv, Date dob, int contact, Date registrationDate,
-			Time timeTaken, Time discussionTimeTaken, String skillsMatched, String criteriaMatched, String internships,
-			String trainings, String reason, String decision) {
+	public ScreeningTwo(int formIdSix, String mail, String cv, Date dob, String contact, Date registration, String time,
+			String discussiontime, String skillsMatched, String criteriaMatched, String internships, String trainings,
+			String reason) {
 		super();
 		this.formIdSix = formIdSix;
-		this.mailId = mailId;
+		this.mail = mail;
 		this.cv = cv;
 		this.dob = dob;
 		this.contact = contact;
-		this.registrationDate = registrationDate;
-		this.timeTaken = timeTaken;
-		this.discussionTimeTaken = discussionTimeTaken;
+		this.registration = registration;
+		this.time = time;
+		this.discussiontime = discussiontime;
 		this.skillsMatched = skillsMatched;
 		this.criteriaMatched = criteriaMatched;
 		this.internships = internships;
 		this.trainings = trainings;
 		this.reason = reason;
-		this.decision = decision;
 	}
 
 	@Override
 	public String toString() {
-		return "ScreeningTwo [formIdSix=" + formIdSix + ", mailId=" + mailId + ", cv=" + cv + ", dob=" + dob
-				+ ", contact=" + contact + ", registrationDate=" + registrationDate + ", timeTaken=" + timeTaken
-				+ ", discussionTimeTaken=" + discussionTimeTaken + ", skillsMatched=" + skillsMatched
-				+ ", criteriaMatched=" + criteriaMatched + ", internships=" + internships + ", trainings=" + trainings
-				+ ", reason=" + reason + ", decision=" + decision + "]";
+		return "ScreeningTwo [formIdSix=" + formIdSix + ", mail=" + mail + ", cv=" + cv + ", dob=" + dob + ", contact="
+				+ contact + ", registration=" + registration + ", time=" + time + ", discussiontime=" + discussiontime
+				+ ", skillsMatched=" + skillsMatched + ", criteriaMatched=" + criteriaMatched + ", internships="
+				+ internships + ", trainings=" + trainings + ", reason=" + reason + "]";
 	}
 
-	
-	
-	
 	
 }

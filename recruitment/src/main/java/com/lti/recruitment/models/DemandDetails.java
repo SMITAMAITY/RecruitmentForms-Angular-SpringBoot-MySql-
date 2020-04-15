@@ -46,8 +46,6 @@ public class DemandDetails {
 	@Column(name ="Requestor_Department")
 	private String requestorDepartment;
 	
-	@OneToMany(mappedBy="demand_details",cascade=CascadeType.MERGE,fetch=FetchType.LAZY)
-	private List<RecruitmentUnderstanding> recruitmentUnderstanding = new ArrayList<>();
 
 	public int getFormIdOne() {
 		return formIdOne;
